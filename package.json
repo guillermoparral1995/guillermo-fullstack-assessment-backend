@@ -1,0 +1,24 @@
+{
+  "name": "guillermo-fullstack-assessment-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Dealroom's full-stack assessment",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest index.spec.ts",
+    "dev": "nodemon --exec ts-node ./server.ts"
+  },
+  "author": "Guillermo Parral",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^4.27.0"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.14.2",
+    "nodemon": "^3.1.3",
+    "ts-jest": "^29.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
