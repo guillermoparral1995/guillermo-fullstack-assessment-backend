@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest index.spec.ts",
-    "dev": "nodemon --exec ts-node ./server.ts"
+    "dev": "nodemon --exec ts-node ./server.ts",
+    "build": "tsc",
+    "start": "node ./dist/server.js"
   },
   "author": "Guillermo Parral",
   "license": "ISC",
