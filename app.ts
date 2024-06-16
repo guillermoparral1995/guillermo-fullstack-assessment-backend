@@ -1,5 +1,5 @@
 import dataJson from './data.json'
-import fastify, { FastifyInstance, FastifyReply } from 'fastify'
+import fastify, { FastifyInstance, FastifyReply, FastifyRequest } from 'fastify'
 
 interface BuildOpts {
   logger: boolean
@@ -8,7 +8,8 @@ interface BuildOpts {
 const build = (opts?: BuildOpts) => {
   const app: FastifyInstance = fastify(opts)
 
-  app.get('/', async (_request, reply: FastifyReply) => {
+  app.get('/', async (request: FastifyRequest, reply: FastifyReply) => {
+    request.log.info('Inbound request')
     reply.send(dataJson)
   })
 
